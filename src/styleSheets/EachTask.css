@@ -1,0 +1,22 @@
+.divEachTask{
+    display: grid;
+    grid-template-columns: 4fr 0.5fr 0.5fr;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    width: 350px;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.taskName{
+    text-align: left;
+    padding: 10px;
+    width: 250px;
+}
+
+.icons{
+    height: 100%;
+    width: 70%;
+    cursor: pointer;
+}

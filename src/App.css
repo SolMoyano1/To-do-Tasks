@@ -1,4 +1,8 @@
 .App {
   text-align: center;
-  background-color: blue;
+  background:linear-gradient(45deg, rgb(138, 10, 57),rgb(205, 95, 136),  rgb(138, 15, 60)) ;
+  background-image: url(../src/multimedia/fondo-madera.webp);
+  height: 100vh;
+  padding: 5px;
+
 }

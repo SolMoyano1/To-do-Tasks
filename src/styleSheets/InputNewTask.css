@@ -4,12 +4,18 @@
 }
 .inputAddNewTask{
     width: 250px;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
+    border: solid 1px rgba(206, 164, 113, 0.389);
 }
 
 .addBtn{
     margin-left: 5px;
     border-radius: 5px;
-
+    border: solid 1px rgba(206, 164, 113, 0.389);
+    color: rgb(255, 255, 255);
+    background-color: rgba(54, 33, 11, 0.823);
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    cursor: pointer;
 }
