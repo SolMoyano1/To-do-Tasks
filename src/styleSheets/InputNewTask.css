@@ -1,0 +1,15 @@
+.formNewTask{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.inputAddNewTask{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.addBtn{
+    margin-left: 5px;
+    border-radius: 5px;
+
+}
