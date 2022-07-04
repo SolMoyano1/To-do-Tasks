@@ -8,6 +8,11 @@
     height: auto;
     word-wrap: break-word;
 }
+.divCompletedTAsks{
+    text-decoration: line-through;
+    background-color: rgba(255, 255, 255, 0.475);
+    background-color: rgba(54, 33, 11, 0.211);
+}
 
 .taskName{
     text-align: left;

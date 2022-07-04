@@ -8,7 +8,6 @@ function InputNewTask (props){
     
     const handleChange = (e)=>{
         setInput (e.target.value);
-        console.log(e.target.value);
     };
 
     const handleSubmit = (e) =>{
@@ -19,6 +18,7 @@ function InputNewTask (props){
             taskName: input,
             completed: false
         };
+        console.log('Added task:');
         console.log(newTask);
 
         props.submit(newTask);

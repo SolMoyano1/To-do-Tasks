@@ -8,7 +8,7 @@ function EachTask (props){
     const {taskName, id, completed, toCheck, toDelete} = props;
     
     return(
-       <div className="divEachTask">
+       <div className={completed? 'divEachTask divCompletedTAsks': 'divEachTask' } >
 
             <div className="taskName">
                 {taskName}
@@ -17,14 +17,14 @@ function EachTask (props){
             <div>
                 <AiOutlineCheckSquare 
                   className="icons"
-                  onClick={toCheck}
+                  onClick={()=> toCheck(id)}
                 />
             </div>
 
             <div>
                 <AiFillCloseSquare 
                   className="icons"
-                  onClick={toDelete}
+                  onClick={()=> toDelete(id)}
                 />
             </div>
             

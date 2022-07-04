@@ -13,36 +13,22 @@ function StructureList (){
             const newArrayTasks = [task, ...tasks];
             setTasks(newArrayTasks);
         };
-        console.log('A new task was added')
     };
 
-    /*
-     addTask?
-  Es una funcion q recibe a tarea como argumento
-
-  Crea un if para agregar una nueva tarea al estado:
-        
-            if (verifico q la tarea no esté en blanco: veo q el texto sea una cadena q no esté vacia){
-              - si no está vacia, le quito espacios al finall y al ppo del texto usando el metodo trim()
-              
-              - hago una constante q será un nuevo array: tomará el estado actual de todas las tareas 
-                q vamos teniendo, y tomará tmb la tarea nueva, a la cual la pondrá al ppo de este nuevo array.
-                (con ... convierto las tareas del arreglo a tareas individuales(objetos individuales d ese array))
-              
-                -con setTasks actualizo el estado de tasks, al pasarle la constante q cree arriba(con las tareas actualizadas)
-                Esto me permite tomar las tareas anteriores y agregar las tareas anteriores al estado
-    .       } 
+    const deleteTask = (id)=>{
+        const newArrayTasks = tasks.filter((task)=> task.id !== id);
+        setTasks(newArrayTasks);
+    };
     
-    */
-
-    const chekTaskAsCompleted = ()=>{
-
+    const chekTaskAsCompleted = (id) =>{
+        const newArrayTasksCompleted = tasks.map( (task) =>{
+            if(task.id === id){
+                task.completed = !task.completed;
+            }
+            return task;
+        })
+        setTasks(newArrayTasksCompleted);
     };
-
-    const deleteTask = ()=>{
-
-    };
-
 
     return(
         <div className="divContainer">
@@ -56,11 +42,11 @@ function StructureList (){
                     tasks.map((task)=>
                         <EachTask
                             taskName = {task.taskName}
-                            id= {task.id}
-                            completed={task.completed}
-                            toCheck={chekTaskAsCompleted}
-                            toDelete={deleteTask}
-                            key={task.id}
+                            id = {task.id}
+                            completed = {task.completed}
+                            toCheck = {chekTaskAsCompleted}
+                            toDelete = {deleteTask}
+                            key = {task.id}
                         />
                     )
                     
