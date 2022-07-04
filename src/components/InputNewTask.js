@@ -18,9 +18,6 @@ function InputNewTask (props){
             taskName: input,
             completed: false
         };
-        console.log('Added task:');
-        console.log(newTask);
-
         props.submit(newTask);
     };
 

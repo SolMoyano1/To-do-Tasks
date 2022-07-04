@@ -12,7 +12,14 @@ function StructureList (){
             task.taskName = task.taskName.trim();
             const newArrayTasks = [task, ...tasks];
             setTasks(newArrayTasks);
+            
+            //data
+            localStorage.setItem('Added Task', JSON.stringify(newArrayTasks));
+            let addedTask= JSON.parse(localStorage.getItem ('Added Task:'));
+            console.log('Added Task: ', addedTask);
         };
+
+        
     };
 
     const deleteTask = (id)=>{
